@@ -26,12 +26,12 @@ This script automatically manages Proxmox firewall IPSet entries by monitoring a
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Renyu106/Proxmox-DNS-IPSet-Updater.git
+git clone https://github.com/Renyu106/Proxmox-UpdateIPSet.git
 ```
 
 2. Make the script executable:
 ```bash
-chmod +x dns-ipset-updater.sh
+chmod +x UpdateIPSet.sh
 ```
 
 ## ⚙️ Configuration
@@ -53,7 +53,7 @@ pvesh create /cluster/firewall/ipset/${IPSET_NAME} -cidr "1.2.3.4/32" -comment "
 
 2. Run the script:
 ```bash
-./dns-ipset-updater.sh
+./UpdateIPSet.sh
 ```
 
 ## 🔄 Automation
@@ -62,7 +62,7 @@ To automate updates, add a cron job:
 
 ```bash
 # Run every hour
-0 * * * * /path/to/dns-ipset-updater.sh
+0 * * * * /path/to/UpdateIPSet.sh
 ```
 
 ## 📝 Example Output
